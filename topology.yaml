@@ -1,0 +1,54 @@
+global:
+  user: "tidb"
+  ssh_port: 22
+  deploy_dir: "/data1/deploy"
+  data_dir: "/data1/data"
+  arch: "amd64" # Supported values: "amd64", "arm64" (default: "amd64")
+
+monitored:
+  node_exporter_port: 9100
+  blackbox_exporter_port: 9115
+
+pd_servers:
+  - host: 192.168.3.61
+  - host: 192.168.3.62
+  - host: 192.168.3.63
+
+tidb_servers:
+  - host: 192.168.3.61
+  - host: 192.168.3.62
+
+tikv_servers:
+  - host: 192.168.3.64
+  - host: 192.168.3.65
+  - host: 192.168.3.66
+  - host: 192.168.5.202
+    ssh_port: 22
+    port: 20160
+    status_port: 20180
+    deploy_dir: /data1/deploy
+    data_dir: /data1/data
+    log_dir: /data1/deploy/log
+    arch: arm64
+    os: linux
+  - host: 192.168.5.204
+    ssh_port: 22
+    port: 20160
+    status_port: 20180
+    deploy_dir: /data1/deploy
+    data_dir: /data1/data
+    log_dir: /data1/deploy/log
+    arch: arm64
+    os: linux
+
+monitoring_servers:
+  - host: 192.168.3.61
+
+
+grafana_servers:
+  - host: 192.168.3.61
+
+alertmanager_servers:
+  - host: 192.168.3.61
+~                                                                                                                                                                                                                                                                              
+~                        
